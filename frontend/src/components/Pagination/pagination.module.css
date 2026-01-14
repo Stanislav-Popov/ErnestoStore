@@ -1,0 +1,72 @@
+/** @format */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pageButton {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pageButton:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: #000;
+    color: white;
+}
+.active:hover {
+    background-color: #262626;
+}
+
+.ellipsis {
+    display: flex;
+    align-items: self-end;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 6px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+
+    .pageButton {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .pagination {
+        gap: 4px;
+    }
+
+    .pageButton {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,140 @@
+/** @format */
+
+.footer {
+    padding: 3rem 2rem;
+    background-color: #000;
+    margin-top: auto; /* Прижимаем к низу */
+    color: #fff;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.column a {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+    display: block;
+}
+
+.column a:hover {
+    opacity: 1;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.desc {
+    max-width: 220px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.bottom {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .column {
+        gap: 0.4rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .desc {
+        font-size: 0.75rem;
+        max-width: 100%;
+        display: none; /* Скрываем описание на мобильных */
+    }
+
+    .title {
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .column a {
+        font-size: 0.8rem;
+    }
+
+    .bottom {
+        font-size: 0.7rem;
+        padding-top: 0.75rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .footer {
+        padding: 1rem 0.75rem;
+    }
+
+    .top {
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .title {
+        font-size: 0.8rem;
+    }
+
+    .column a {
+        font-size: 0.75rem;
+    }
+
+    .bottom {
+        font-size: 0.65rem;
+        padding-top: 0.5rem;
+    }
+}

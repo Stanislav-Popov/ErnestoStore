@@ -1,0 +1,247 @@
+/** @format */
+/* Этот файл должен быть в папке: src/components/ProductCard/catalogProductCard.module.css */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    min-width: 0;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discountBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4757;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: scale(0.8);
+    aspect-ratio: 1 / 1;
+    padding: 0;
+}
+
+.card:hover .favoriteButton {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.favoriteButton:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+.favoriteActive {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heartIcon {
+    font-size: 18px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.favoriteActive .heartIcon {
+    color: #ff4757;
+}
+
+.favoriteButton:hover .heartIcon {
+    color: #ff4757;
+}
+
+.info {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.name {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.oldPrice {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .imageWrapper {
+        aspect-ratio: 1 / 1;
+    }
+
+    .info {
+        padding: 0.8rem;
+    }
+
+    .name {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .card {
+        border-radius: 8px;
+    }
+
+    .imageWrapper {
+        border-radius: 8px;
+    }
+
+    .image {
+        border-radius: 8px;
+    }
+
+    .discountBadge {
+        top: 8px;
+        left: 8px;
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .favoriteButton {
+        opacity: 1;
+        transform: scale(1);
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        top: 8px;
+        right: 8px;
+        padding: 0;
+    }
+
+    .heartIcon {
+        font-size: 16px;
+    }
+
+    .info {
+        padding: 0.6rem;
+    }
+
+    .name {
+        font-size: 0.85rem;
+        margin: 0.3rem 0;
+    }
+
+    .price {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .oldPrice {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .discountBadge {
+        top: 6px;
+        left: 6px;
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+
+    .favoriteButton {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        top: 6px;
+        right: 6px;
+        padding: 0;
+    }
+
+    .heartIcon {
+        font-size: 14px;
+    }
+
+    .info {
+        padding: 0.5rem;
+    }
+
+    .name {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 0.95rem;
+    }
+
+    .oldPrice {
+        font-size: 0.75rem;
+    }
+}

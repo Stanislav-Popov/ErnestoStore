@@ -1,0 +1,128 @@
+/** @format */
+
+.catalogWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Исправлен отступ - выровнено с товарами */
+.resultsInfo {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.emptyIcon {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.emptyState p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px;
+}
+
+.emptyState span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Бесконечная прокрутка */
+.loadMoreTrigger {
+    height: 1px;
+    width: 100%;
+}
+
+.loadingMore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px;
+    font-size: 14px;
+    color: #888;
+}
+
+.loadMoreBtn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 24px auto;
+    padding: 14px 24px;
+    background: #fff;
+    border: 1px solid #1a1a2e;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a2e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.loadMoreBtn:hover {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.loadMoreBtn:active {
+    transform: scale(0.98);
+}
+
+.endMessage {
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee;
+    margin-top: 24px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .resultsInfo {
+        font-size: 13px;
+        margin-bottom: 12px;
+        padding-left: 12px;
+    }
+
+    .emptyState {
+        padding: 40px 16px;
+    }
+
+    .emptyState p {
+        font-size: 16px;
+    }
+
+    .emptyState span {
+        font-size: 13px;
+    }
+
+    .loadMoreBtn {
+        max-width: none;
+        margin: 20px 0;
+    }
+
+    .endMessage {
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .resultsInfo {
+        padding-left: 10px;
+    }
+}

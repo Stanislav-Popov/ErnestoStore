@@ -1,0 +1,435 @@
+/** @format */
+
+.wrapper {
+    padding: 20px 80px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.breadcrumbsWrapper {
+    margin-bottom: -20px;
+}
+
+.mainSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    min-width: 400px;
+    align-items: flex-start;
+}
+
+.thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbWrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+    overflow: hidden;
+}
+
+.thumbWrapper:hover {
+    opacity: 0.85;
+}
+
+.activeThumb {
+    border-color: #1a1a2e;
+}
+
+.mainImage {
+    width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+}
+
+/* Кнопка избранного - исправлено на круглую */
+.favoriteBtn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    padding: 0;
+}
+
+.favoriteBtn:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+}
+
+.favoriteBtnActive {
+    background-color: #fff0f0;
+}
+
+.heartIcon {
+    font-size: 22px;
+    color: #666;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.favoriteBtnActive .heartIcon {
+    color: #ff4757;
+}
+
+.favoriteBtn:hover .heartIcon {
+    color: #ff4757;
+}
+
+.sizesLabel {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.priceBlock {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.oldPrice {
+    font-size: 18px;
+    color: #999;
+    text-decoration: line-through;
+    margin: 0;
+}
+
+.discount {
+    background: #ff4757;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sizes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sizeList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Размеры как чипы (не кнопки) */
+.sizeChip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 36px;
+    padding: 0 12px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.description p {
+    margin: 0;
+}
+
+.descText {
+    line-height: 1.5;
+    opacity: 0.75;
+    text-align: justify;
+    margin-top: 8px !important;
+}
+
+.relatedBlock {
+    margin-top: 20px;
+}
+
+.relatedTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 20px 40px 30px;
+        gap: 30px;
+    }
+
+    .mainSection {
+        gap: 40px;
+    }
+
+    .gallery {
+        min-width: 350px;
+    }
+
+    .mainImage {
+        width: 400px;
+    }
+
+    .thumbWrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .info {
+        min-width: 280px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .relatedGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 16px 16px 25px;
+        gap: 25px;
+    }
+
+    .breadcrumbsWrapper {
+        margin-bottom: -15px;
+    }
+
+    .mainSection {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .gallery {
+        flex-direction: column-reverse;
+        min-width: unset;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .thumbs {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .thumbWrapper {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+
+    .mainImage {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .info {
+        min-width: unset;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .titleRow {
+        gap: 12px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .favoriteBtn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .heartIcon {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .sizeChip {
+        min-width: 38px;
+        height: 34px;
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .relatedBlock {
+        margin-top: 20px;
+    }
+
+    .relatedTitle {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .relatedGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 12px 12px 20px;
+    }
+
+    .thumbWrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .favoriteBtn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+    }
+
+    .heartIcon {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .oldPrice {
+        font-size: 15px;
+    }
+
+    .discount {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .sizesLabel {
+        font-size: 14px;
+    }
+
+    .sizeChip {
+        min-width: 36px;
+        height: 32px;
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .descText {
+        font-size: 13px;
+    }
+
+    .relatedTitle {
+        font-size: 18px;
+    }
+
+    .relatedGrid {
+        gap: 10px;
+    }
+}

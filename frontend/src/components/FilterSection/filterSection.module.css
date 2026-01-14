@@ -1,0 +1,60 @@
+/** @format */
+
+.animatedWrapper {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+}
+
+.animatedWrapper.open {
+    transition: max-height 0.35s ease;
+}
+
+.border {
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.arrow {
+    transition: transform 0.3s;
+    padding-bottom: 5px;
+}
+
+.sectionContent {
+    padding: 4px 0 8px 0;
+}
+
+.sectionHeader {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrowOpen {
+    transform: rotate(180deg);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sectionHeader {
+        padding: 12px 0;
+        font-size: 15px;
+    }
+
+    .sectionContent {
+        padding: 8px 0 12px 0;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .sectionHeader {
+        font-size: 14px;
+    }
+}

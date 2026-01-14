@@ -1,0 +1,208 @@
+/** @format */
+
+.searchBox {
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 6px 10px;
+    padding-right: 60px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: #b5b5b5;
+}
+
+.clearButton {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #555555;
+    transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+    color: #000;
+}
+
+.loadingIcon {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+}
+
+.searchButton {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.2s ease;
+    outline: none;
+}
+
+.searchButton:hover {
+    color: #b5b5b5;
+}
+
+/* Dropdown стили */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    max-height: 350px;
+    overflow-y: auto;
+    animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.suggestionItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.suggestionItem:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.suggestionItem:hover {
+    background-color: #f5f5f5;
+}
+
+.suggestionImage {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+}
+
+.suggestionInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.suggestionName {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 2px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.suggestionPrice {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.showAllBtn {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #007aff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.showAllBtn:hover {
+    background-color: #f5f5f5;
+}
+
+.noResults {
+    padding: 20px 14px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .searchInput {
+        padding: 8px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding-right: 70px;
+    }
+
+    .clearButton {
+        right: 40px;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .loadingIcon {
+        right: 40px;
+    }
+
+    .searchButton {
+        right: 10px;
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .dropdown {
+        position: fixed;
+        left: 16px;
+        right: 16px;
+        top: auto;
+        max-height: 300px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .searchInput {
+        padding: 8px 10px;
+        padding-right: 60px;
+    }
+}

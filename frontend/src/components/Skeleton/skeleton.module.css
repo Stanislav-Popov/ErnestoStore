@@ -1,0 +1,167 @@
+/** @format */
+
+/* Базовый скелетон с анимацией */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Карточка товара */
+.productCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.productCard .image {
+    width: 100%;
+}
+
+.productCard .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Сетка товаров */
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .productGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+/* Страница товара */
+.productPage {
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+}
+
+.mainSection {
+    display: flex;
+    gap: 60px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.productInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+}
+
+.sizes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .productPage {
+        padding: 16px;
+    }
+
+    .mainSection {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .gallery {
+        flex-direction: column-reverse;
+    }
+
+    .thumbs {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .productInfo {
+        max-width: 100%;
+    }
+}
+
+/* Сайдбар фильтров */
+.filterSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filterOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Таблица */
+.table {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}

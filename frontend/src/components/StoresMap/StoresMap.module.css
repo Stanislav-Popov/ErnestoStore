@@ -1,0 +1,246 @@
+/** @format */
+
+.container {
+    padding: 60px 80px;
+    background: #f9f9f9;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 12px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Список магазинов */
+.storesList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.storeCard {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.storeCard:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.storeCard.active {
+    border-color: #1a1a2e;
+}
+
+.storeCity {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 12px;
+}
+
+.storeInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.infoRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.infoRow a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.infoRow a:hover {
+    color: #1a1a2e;
+}
+
+.icon {
+    font-size: 16px;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.routeBtn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.routeBtn:hover {
+    background: #2d2d4a;
+    transform: translateY(-1px);
+}
+
+/* Карта */
+.mapWrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 450px;
+    background: #e8e8e8;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+}
+
+.mapIframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: none;
+}
+
+.mapPlaceholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.mapLoader {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .container {
+        padding: 50px 40px;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .mapWrapper,
+    .map,
+    .mapIframe {
+        min-height: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 16px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .storesList {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 12px;
+    }
+
+    .storeCard {
+        padding: 16px;
+    }
+
+    .storeCity {
+        font-size: 16px;
+    }
+
+    .infoRow {
+        font-size: 13px;
+    }
+
+    .mapWrapper {
+        order: -1; /* Карта сверху на мобильных */
+    }
+
+    .mapWrapper,
+    .map,
+    .mapIframe {
+        min-height: 300px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 12px;
+    }
+
+    .storesList {
+        grid-template-columns: 1fr;
+    }
+
+    .routeBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mapWrapper,
+    .map,
+    .mapIframe {
+        min-height: 250px;
+    }
+}

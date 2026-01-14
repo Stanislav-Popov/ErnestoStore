@@ -1,0 +1,1786 @@
+ schema_name     |        table_name        |       column_name        |          data_type          | is_nullabl
+e |                column_default                 |            constraints
+--------------------+--------------------------+--------------------------+-----------------------------+-----------
+--+-----------------------------------------------+-----------------------------------
+ information_schema | sql_features             | feature_id               | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | feature_name             | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | sub_feature_id           | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | sub_feature_name         | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | is_supported             | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | is_verified_by           | character varying           | YES
+  |                                               |
+ information_schema | sql_features             | comments                 | character varying           | YES
+  |                                               |
+ information_schema | sql_implementation_info  | implementation_info_id   | character varying           | YES
+  |                                               |
+ information_schema | sql_implementation_info  | implementation_info_name | character varying           | YES
+  |                                               |
+ information_schema | sql_implementation_info  | integer_value            | integer                     | YES
+  |                                               |
+ information_schema | sql_implementation_info  | character_value          | character varying           | YES
+  |                                               |
+ information_schema | sql_implementation_info  | comments                 | character varying           | YES
+  |                                               |
+ information_schema | sql_parts                | feature_id               | character varying           | YES
+  |                                               |
+ information_schema | sql_parts                | feature_name             | character varying           | YES
+  |                                               |
+ information_schema | sql_parts                | is_supported             | character varying           | YES
+  |                                               |
+ information_schema | sql_parts                | is_verified_by           | character varying           | YES
+  |                                               |
+ information_schema | sql_parts                | comments                 | character varying           | YES
+  |                                               |
+ information_schema | sql_sizing               | sizing_id                | integer                     | YES
+  |                                               |
+ information_schema | sql_sizing               | sizing_name              | character varying           | YES
+  |                                               |
+ information_schema | sql_sizing               | supported_value          | integer                     | YES
+  |                                               |
+ information_schema | sql_sizing               | comments                 | character varying           | YES
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggfnoid                 | regproc                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_aggregate             | aggkind                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggnumdirectargs         | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggtransfn               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggfinalfn               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggcombinefn             | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggserialfn              | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggdeserialfn            | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmtransfn              | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggminvtransfn           | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmfinalfn              | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggfinalextra            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmfinalextra           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggfinalmodify           | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmfinalmodify          | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggsortop                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggtranstype             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggtransspace            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmtranstype            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggmtransspace           | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_aggregate             | agginitval               | text                        | YES
+  |                                               |
+ pg_catalog         | pg_aggregate             | aggminitval              | text                        | YES
+  |                                               |
+ pg_catalog         | pg_am                    | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_am                    | amname                   | name                        | NO
+  |                                               |
+ pg_catalog         | pg_am                    | amhandler                | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_am                    | amtype                   | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopfamily               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoplefttype             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoplefttype             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoplefttype             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoplefttype             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoprighttype            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoprighttype            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoprighttype            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoprighttype            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopstrategy             | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopstrategy             | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopstrategy             | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopstrategy             | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoppurpose              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoppurpose              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amoppurpose              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopopr                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopopr                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopopr                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopmethod               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amop                  | amopsortfamily           | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_amproc                | amprocfamily             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocfamily             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocfamily             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocfamily             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amproclefttype           | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amproclefttype           | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amproclefttype           | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amproclefttype           | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocrighttype          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocrighttype          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocrighttype          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocrighttype          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocnum                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocnum                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocnum                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amprocnum                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_amproc                | amproc                   | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_attrdef               | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_attrdef               | adrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attrdef               | adrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attrdef               | adnum                    | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_attrdef               | adnum                    | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_attrdef               | adbin                    | pg_node_tree                | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attrelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_attribute             | attrelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_attribute             | attname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | atttypid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attlen                   | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attnum                   | smallint                    | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_attribute             | attnum                   | smallint                    | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_attribute             | attcacheoff              | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | atttypmod                | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attndims                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attbyval                 | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attalign                 | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attstorage               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attcompression           | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attnotnull               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | atthasdef                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | atthasmissing            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attidentity              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attgenerated             | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attisdropped             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attislocal               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attinhcount              | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attcollation             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_attribute             | attstattarget            | smallint                    | YES
+  |                                               |
+ pg_catalog         | pg_attribute             | attacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_attribute             | attoptions               | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_attribute             | attfdwoptions            | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_attribute             | attmissingval            | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_auth_members          | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | roleid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | member                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | grantor                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | admin_option             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | inherit_option           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_auth_members          | set_option               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_authid                | rolname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolsuper                 | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolinherit               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolcreaterole            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolcreatedb              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolcanlogin              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolreplication           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolbypassrls             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolconnlimit             | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_authid                | rolpassword              | text                        | YES
+  |                                               |
+ pg_catalog         | pg_authid                | rolvaliduntil            | timestamp with time zone    | YES
+  |                                               |
+ pg_catalog         | pg_cast                  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_cast                  | castsource               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | castsource               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | casttarget               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | casttarget               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | castfunc                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | castcontext              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_cast                  | castmethod               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_class                 | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_class                 | relname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | reltype                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | reloftype                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relam                    | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relfilenode              | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | reltablespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relpages                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | reltuples                | real                        | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relallvisible            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | reltoastrelid            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relhasindex              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relisshared              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relpersistence           | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relkind                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relnatts                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relchecks                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relhasrules              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relhastriggers           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relhassubclass           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relrowsecurity           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relforcerowsecurity      | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relispopulated           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relreplident             | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relispartition           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relrewrite               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relfrozenxid             | xid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relminmxid               | xid                         | NO
+  |                                               |
+ pg_catalog         | pg_class                 | relacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_class                 | reloptions               | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_class                 | relpartbound             | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_collation             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_collation             | collname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collowner                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collprovider             | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collisdeterministic      | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collencoding             | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collencoding             | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collencoding             | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_collation             | collcollate              | text                        | YES
+  |                                               |
+ pg_catalog         | pg_collation             | collctype                | text                        | YES
+  |                                               |
+ pg_catalog         | pg_collation             | colllocale               | text                        | YES
+  |                                               |
+ pg_catalog         | pg_collation             | collicurules             | text                        | YES
+  |                                               |
+ pg_catalog         | pg_collation             | collversion              | text                        | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_constraint            | conname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | contype                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | condeferrable            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | condeferred              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | convalidated             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | contypid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | contypid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | contypid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conindid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conparentid              | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | confrelid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | confupdtype              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | confdeltype              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | confmatchtype            | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conislocal               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | coninhcount              | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | connoinherit             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_constraint            | conkey                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | confkey                  | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | conpfeqop                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | conppeqop                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | conffeqop                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | confdelsetcols           | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | conexclop                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_constraint            | conbin                   | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_conversion            | oid                      | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | oid                      | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | oid                      | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | oid                      | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_conversion            | conname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | connamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conforencoding           | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conforencoding           | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conforencoding           | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conforencoding           | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | contoencoding            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | contoencoding            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | contoencoding            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | contoencoding            | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | conproc                  | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_conversion            | condefault               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_database              | datname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_database              | datdba                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_database              | encoding                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | datlocprovider           | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_database              | datistemplate            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | datallowconn             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | dathasloginevt           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | datconnlimit             | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_database              | datfrozenxid             | xid                         | NO
+  |                                               |
+ pg_catalog         | pg_database              | datminmxid               | xid                         | NO
+  |                                               |
+ pg_catalog         | pg_database              | dattablespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_database              | datcollate               | text                        | NO
+  |                                               |
+ pg_catalog         | pg_database              | datctype                 | text                        | NO
+  |                                               |
+ pg_catalog         | pg_database              | datlocale                | text                        | YES
+  |                                               |
+ pg_catalog         | pg_database              | daticurules              | text                        | YES
+  |                                               |
+ pg_catalog         | pg_database              | datcollversion           | text                        | YES
+  |                                               |
+ pg_catalog         | pg_database              | datacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_db_role_setting       | setdatabase              | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_db_role_setting       | setdatabase              | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_db_role_setting       | setrole                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_db_role_setting       | setrole                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_db_role_setting       | setconfig                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_default_acl           | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_default_acl           | defaclrole               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclrole               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclrole               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclnamespace          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclnamespace          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclnamespace          | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclobjtype            | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclobjtype            | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclobjtype            | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_default_acl           | defaclacl                | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_depend                | classid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_depend                | objid                    | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_depend                | objsubid                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_depend                | refclassid               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_depend                | refobjid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_depend                | refobjsubid              | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_depend                | deptype                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_description           | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_description           | description              | text                        | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_enum                  | enumtypid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumtypid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumtypid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumtypid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumsortorder            | real                        | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumsortorder            | real                        | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumlabel                | name                        | NO
+  |                                               |
+ pg_catalog         | pg_enum                  | enumlabel                | name                        | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_event_trigger         | evtname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | evtevent                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | evtowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | evtfoid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | evtenabled               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_event_trigger         | evttags                  | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_extension             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_extension             | extname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_extension             | extowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_extension             | extnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_extension             | extrelocatable           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_extension             | extversion               | text                        | NO
+  |                                               |
+ pg_catalog         | pg_extension             | extconfig                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_extension             | extcondition             | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_foreign_data_wrapper  | fdwname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | fdwowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | fdwhandler               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | fdwvalidator             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | fdwacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_foreign_data_wrapper  | fdwoptions               | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_foreign_server        | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_foreign_server        | srvname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvfdw                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvtype                  | text                        | YES
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvversion               | text                        | YES
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_foreign_server        | srvoptions               | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_foreign_table         | ftrelid                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_foreign_table         | ftserver                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_foreign_table         | ftoptions                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_index                 | indexrelid               | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_index                 | indrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indnatts                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indnkeyatts              | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisunique              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indnullsnotdistinct      | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisprimary             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisexclusion           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indimmediate             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisclustered           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisvalid               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indcheckxmin             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisready               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indislive                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indisreplident           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indkey                   | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indcollation             | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indclass                 | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indoption                | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_index                 | indexprs                 | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_index                 | indpred                  | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_inherits              | inhrelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_inherits              | inhrelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_inherits              | inhparent                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_inherits              | inhseqno                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_inherits              | inhseqno                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_inherits              | inhdetachpending         | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_init_privs            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_init_privs            | privtype                 | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_init_privs            | initprivs                | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_language              | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_language              | lanname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanispl                  | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanpltrusted             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanplcallfoid            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_language              | laninline                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanvalidator             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_language              | lanacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_largeobject           | loid                     | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_largeobject           | loid                     | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_largeobject           | pageno                   | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_largeobject           | pageno                   | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_largeobject           | data                     | bytea                       | NO
+  |                                               |
+ pg_catalog         | pg_largeobject_metadata  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_largeobject_metadata  | lomowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_largeobject_metadata  | lomacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_namespace             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_namespace             | nspname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_namespace             | nspowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_namespace             | nspacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_opclass               | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_opclass               | opcmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcfamily                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcintype                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opcdefault               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_opclass               | opckeytype               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_operator              | oprname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprkind                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprcanmerge              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprcanhash               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprleft                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprleft                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprleft                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprleft                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprright                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprright                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprright                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprright                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprresult                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprcom                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprnegate                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprcode                  | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprrest                  | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_operator              | oprjoin                  | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_opfamily              | opfmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfmethod                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_opfamily              | opfowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_parameter_acl         | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_parameter_acl         | parname                  | text                        | NO
+  |                                               |
+ pg_catalog         | pg_parameter_acl         | paracl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partrelid                | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_partitioned_table     | partstrat                | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partnatts                | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partdefid                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partattrs                | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partclass                | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partcollation            | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_partitioned_table     | partexprs                | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_policy                | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_policy                | polname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polcmd                   | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polpermissive            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polroles                 | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_policy                | polqual                  | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_policy                | polwithcheck             | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_proc                  | proname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | pronamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | pronamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | pronamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prolang                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | procost                  | real                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prorows                  | real                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | provariadic              | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prosupport               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prokind                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prosecdef                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proleakproof             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proisstrict              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proretset                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | provolatile              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proparallel              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | pronargs                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | pronargdefaults          | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | prorettype               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proargtypes              | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proargtypes              | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proargtypes              | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | proallargtypes           | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | proargmodes              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | proargnames              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | proargdefaults           | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | protrftypes              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | prosrc                   | text                        | NO
+  |                                               |
+ pg_catalog         | pg_proc                  | probin                   | text                        | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | prosqlbody               | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | proconfig                | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_proc                  | proacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_publication           | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_publication           | pubname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication           | puballtables             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubinsert                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubupdate                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubdelete                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubtruncate              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication           | pubviaroot               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_publication_namespace | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_publication_namespace | pnpubid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_namespace | pnpubid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_namespace | pnnspid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_namespace | pnnspid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_rel       | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_publication_rel       | prpubid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_rel       | prpubid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_rel       | prrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_rel       | prrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_publication_rel       | prqual                   | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_publication_rel       | prattrs                  | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_range                 | rngtypid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_range                 | rngsubtype               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_range                 | rngmultitypid            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_range                 | rngcollation             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_range                 | rngsubopc                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_range                 | rngcanonical             | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_range                 | rngsubdiff               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_replication_origin    | roident                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_replication_origin    | roname                   | text                        | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_rewrite               | rulename                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | rulename                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_class                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_class                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_type                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_enabled               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | is_instead               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_qual                  | pg_node_tree                | NO
+  |                                               |
+ pg_catalog         | pg_rewrite               | ev_action                | pg_node_tree                | NO
+  |                                               |
+ pg_catalog         | pg_seclabel              | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | objsubid                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_seclabel              | label                    | text                        | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqrelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_sequence              | seqtypid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqstart                 | bigint                      | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqincrement             | bigint                      | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqmax                   | bigint                      | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqmin                   | bigint                      | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqcache                 | bigint                      | NO
+  |                                               |
+ pg_catalog         | pg_sequence              | seqcycle                 | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | dbid                     | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | classid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | objid                    | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | objsubid                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | refclassid               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | refobjid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_shdepend              | deptype                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_shdescription         | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shdescription         | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shdescription         | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shdescription         | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shdescription         | description              | text                        | NO
+  |                                               |
+ pg_catalog         | pg_shseclabel            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | objoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | classoid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | provider                 | text                        | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_shseclabel            | label                    | text                        | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | starelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | starelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | starelid                 | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | staattnum                | smallint                    | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | staattnum                | smallint                    | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | staattnum                | smallint                    | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | stainherit               | boolean                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | stainherit               | boolean                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | stainherit               | boolean                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic             | stanullfrac              | real                        | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stawidth                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stadistinct              | real                        | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stakind1                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stakind2                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stakind3                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stakind4                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stakind5                 | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | staop1                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | staop2                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | staop3                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | staop4                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | staop5                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stacoll1                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stacoll2                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stacoll3                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stacoll4                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stacoll5                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic             | stanumbers1              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stanumbers2              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stanumbers3              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stanumbers4              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stanumbers5              | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stavalues1               | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stavalues2               | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stavalues3               | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stavalues4               | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic             | stavalues5               | anyarray                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic_ext         | stxrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxkeys                  | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxstattarget            | smallint                    | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxkind                  | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_statistic_ext         | stxexprs                 | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext_data    | stxoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic_ext_data    | stxoid                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic_ext_data    | stxdinherit              | boolean                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic_ext_data    | stxdinherit              | boolean                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_statistic_ext_data    | stxdndistinct            | pg_ndistinct                | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext_data    | stxddependencies         | pg_dependencies             | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext_data    | stxdmcv                  | pg_mcv_list                 | YES
+  |                                               |
+ pg_catalog         | pg_statistic_ext_data    | stxdexpr                 | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_subscription          | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_subscription          | subdbid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subdbid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subskiplsn               | pg_lsn                      | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subenabled               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subbinary                | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | substream                | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subtwophasestate         | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subdisableonerr          | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subpasswordrequired      | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subrunasowner            | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subfailover              | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subconninfo              | text                        | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subslotname              | name                        | YES
+  |                                               |
+ pg_catalog         | pg_subscription          | subsynccommit            | text                        | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | subpublications          | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_subscription          | suborigin                | text                        | YES
+  |                                               |
+ pg_catalog         | pg_subscription_rel      | srsubid                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_subscription_rel      | srsubid                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_subscription_rel      | srrelid                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_subscription_rel      | srrelid                  | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_subscription_rel      | srsubstate               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_subscription_rel      | srsublsn                 | pg_lsn                      | YES
+  |                                               |
+ pg_catalog         | pg_tablespace            | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_tablespace            | spcname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_tablespace            | spcowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_tablespace            | spcacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_tablespace            | spcoptions               | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_transform             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_transform             | trftype                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_transform             | trftype                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_transform             | trflang                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_transform             | trflang                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_transform             | trffromsql               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_transform             | trftosql                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_trigger               | tgrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgrelid                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgparentid               | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgname                   | name                        | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgname                   | name                        | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgfoid                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgtype                   | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgenabled                | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgisinternal             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgconstrrelid            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgconstrindid            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgconstraint             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgdeferrable             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tginitdeferred           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgnargs                  | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgattr                   | ARRAY                       | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgargs                   | bytea                       | NO
+  |                                               |
+ pg_catalog         | pg_trigger               | tgqual                   | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_trigger               | tgoldtable               | name                        | YES
+  |                                               |
+ pg_catalog         | pg_trigger               | tgnewtable               | name                        | YES
+  |                                               |
+ pg_catalog         | pg_ts_config             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config             | cfgname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_config             | cfgname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_config             | cfgnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_config             | cfgnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_config             | cfgowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_config             | cfgparser                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_config_map         | mapcfg                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapcfg                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapcfg                   | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | maptokentype             | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | maptokentype             | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | maptokentype             | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapseqno                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapseqno                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapseqno                 | integer                     | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_config_map         | mapdict                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_dict               | dictname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dictname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dictnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dictnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dictowner                | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dicttemplate             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_dict               | dictinitoption           | text                        | YES
+  |                                               |
+ pg_catalog         | pg_ts_parser             | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_parser             | prsname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsstart                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prstoken                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsend                   | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prsheadline              | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_parser             | prslextype               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_ts_template           | tmplname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | tmplname                 | name                        | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | tmplnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | tmplnamespace            | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | tmplinit                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_ts_template           | tmpllexize               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_type                  | typname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typname                  | name                        | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typnamespace             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typowner                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typlen                   | smallint                    | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typbyval                 | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typtype                  | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typcategory              | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typispreferred           | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typisdefined             | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typdelim                 | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typrelid                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typsubscript             | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typelem                  | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typarray                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typinput                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typoutput                | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typreceive               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typsend                  | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typmodin                 | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typmodout                | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typanalyze               | regproc                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typalign                 | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typstorage               | "char"                      | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typnotnull               | boolean                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typbasetype              | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typtypmod                | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typndims                 | integer                     | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typcollation             | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_type                  | typdefaultbin            | pg_node_tree                | YES
+  |                                               |
+ pg_catalog         | pg_type                  | typdefault               | text                        | YES
+  |                                               |
+ pg_catalog         | pg_type                  | typacl                   | ARRAY                       | YES
+  |                                               |
+ pg_catalog         | pg_user_mapping          | oid                      | oid                         | NO
+  |                                               | PRIMARY KEY
+ pg_catalog         | pg_user_mapping          | umuser                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_user_mapping          | umuser                   | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_user_mapping          | umserver                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_user_mapping          | umserver                 | oid                         | NO
+  |                                               |
+ pg_catalog         | pg_user_mapping          | umoptions                | ARRAY                       | YES
+  |                                               |
+ public             | admins                   | id                       | integer                     | NO
+  | nextval('admins_id_seq'::regclass)            | PRIMARY KEY
+ public             | admins                   | username                 | character varying           | NO
+  |                                               |
+ public             | admins                   | password_hash            | character varying           | NO
+  |                                               |
+ public             | admins                   | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | admins                   | last_login               | timestamp without time zone | YES
+  |                                               |
+ public             | brands                   | id                       | integer                     | NO
+  | nextval('brands_id_seq'::regclass)            | PRIMARY KEY
+ public             | brands                   | name                     | character varying           | NO
+  |                                               |
+ public             | brands                   | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | colors                   | id                       | integer                     | NO
+  | nextval('colors_id_seq'::regclass)            | PRIMARY KEY
+ public             | colors                   | name                     | character varying           | NO
+  |                                               |
+ public             | colors                   | hex_code                 | character varying           | YES
+  |                                               |
+ public             | colors                   | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | product_favorites        | id                       | integer                     | NO
+  | nextval('product_favorites_id_seq'::regclass) | PRIMARY KEY
+ public             | product_favorites        | product_id               | integer                     | NO
+  |                                               |
+ public             | product_favorites        | product_id               | integer                     | NO
+  |                                               |
+ public             | product_favorites        | product_id               | integer                     | NO
+  |                                               | FOREIGN KEY → public.products(id)
+ public             | product_favorites        | device_id                | character varying           | NO
+  |                                               |
+ public             | product_favorites        | device_id                | character varying           | NO
+  |                                               |
+ public             | product_favorites        | is_active                | boolean                     | YES
+  | true                                          |
+ public             | product_favorites        | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | product_favorites        | updated_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | product_images           | id                       | integer                     | NO
+  | nextval('product_images_id_seq'::regclass)    | PRIMARY KEY
+ public             | product_images           | product_id               | integer                     | NO
+  |                                               | FOREIGN KEY → public.products(id)
+ public             | product_images           | image_url                | character varying           | NO
+  |                                               |
+ public             | product_images           | is_primary               | boolean                     | YES
+  | false                                         |
+ public             | product_images           | sort_order               | integer                     | YES
+  | 0                                             |
+ public             | product_images           | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | product_sizes            | id                       | integer                     | NO
+  | nextval('product_sizes_id_seq'::regclass)     | PRIMARY KEY
+ public             | product_sizes            | product_id               | integer                     | NO
+  |                                               |
+ public             | product_sizes            | product_id               | integer                     | NO
+  |                                               | FOREIGN KEY → public.products(id)
+ public             | product_sizes            | product_id               | integer                     | NO
+  |                                               |
+ public             | product_sizes            | size_id                  | integer                     | NO
+  |                                               | FOREIGN KEY → public.sizes(id)
+ public             | product_sizes            | size_id                  | integer                     | NO
+  |                                               |
+ public             | product_sizes            | size_id                  | integer                     | NO
+  |                                               |
+ public             | product_sizes            | stock                    | integer                     | YES
+  | 0                                             |
+ public             | product_views            | id                       | integer                     | NO
+  | nextval('product_views_id_seq'::regclass)     | PRIMARY KEY
+ public             | product_views            | product_id               | integer                     | NO
+  |                                               | FOREIGN KEY → public.products(id)
+ public             | product_views            | device_id                | character varying           | YES
+  |                                               |
+ public             | product_views            | ip_address               | character varying           | YES
+  |                                               |
+ public             | product_views            | session_id               | character varying           | YES
+  |                                               |
+ public             | product_views            | viewed_date              | date                        | YES
+  | CURRENT_DATE                                  |
+ public             | product_views            | viewed_at                | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | products                 | id                       | integer                     | NO
+  | nextval('products_id_seq'::regclass)          | PRIMARY KEY
+ public             | products                 | name                     | character varying           | NO
+  |                                               |
+ public             | products                 | price                    | numeric                     | NO
+  |                                               |
+ public             | products                 | description              | text                        | YES
+  |                                               |
+ public             | products                 | brand_id                 | integer                     | YES
+  |                                               | FOREIGN KEY → public.brands(id)
+ public             | products                 | type_id                  | integer                     | YES
+  |                                               | FOREIGN KEY → public.types(id)
+ public             | products                 | color_id                 | integer                     | YES
+  |                                               | FOREIGN KEY → public.colors(id)
+ public             | products                 | sales                    | integer                     | YES
+  | 0                                             |
+ public             | products                 | is_active                | boolean                     | YES
+  | true                                          |
+ public             | products                 | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | products                 | updated_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP                             |
+ public             | products                 | discount_percent         | integer                     | YES
+  | 0                                             |
+ public             | products                 | views_count              | integer                     | YES
+  | 0                                             |
+ public             | products                 | favorites_count          | integer                     | YES
+  | 0                                             |
+ public             | products                 | material                 | character varying           | YES
+  |                                               |
+ public             | sizes                    | id                       | integer                     | NO
+  | nextval('sizes_id_seq'::regclass)             | PRIMARY KEY
+ public             | sizes                    | name                     | character varying           | NO
+  |                                               |
+ public             | sizes                    | sort_order               | integer                     | YES
+  | 0                                             |
+ public             | sizes                    | category                 | character varying           | YES
+  | 'letter'::character varying                   |
+ public             | types                    | id                       | integer                     | NO
+  | nextval('types_id_seq'::regclass)             | PRIMARY KEY
+ public             | types                    | name                     | character varying           | NO
+  |                                               |
+ public             | types                    | created_at               | timestamp without time zone | YES
+  | CURRENT_TIMESTAMP 

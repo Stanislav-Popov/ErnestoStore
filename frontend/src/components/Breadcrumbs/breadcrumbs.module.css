@@ -1,0 +1,76 @@
+/** @format */
+/* Этот файл должен быть в папке: src/components/Breadcrumbs/breadcrumbs.module.css */
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+.crumbWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.separator {
+    font-size: 10px;
+    color: #999;
+}
+
+.crumbLink {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    /* line-height: 1; */
+}
+
+.crumbLink:hover {
+    color: #000;
+}
+
+.currentCrumb {
+    color: #000;
+    font-weight: 500;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        padding: 12px 0;
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    .crumbWrapper {
+        gap: 6px;
+    }
+
+    .separator {
+        font-size: 8px;
+    }
+
+    .currentCrumb {
+        max-width: 150px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .breadcrumbs {
+        font-size: 12px;
+    }
+
+    .currentCrumb {
+        max-width: 120px;
+    }
+}
