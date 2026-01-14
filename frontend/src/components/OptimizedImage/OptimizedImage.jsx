@@ -1,9 +1,8 @@
 /** @format */
 
 import { useState, useRef, useEffect, memo } from "react"
+import { SERVER_URL } from "../../config/api"
 import styles from "./optimizedImage.module.css"
-
-const SERVER_URL = "http://localhost:5000"
 
 /**
  * Формирует полный URL изображения

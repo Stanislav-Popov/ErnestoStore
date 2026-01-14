@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useAuth } from "../context/AuthContext"
+import { API_URL } from "../../config/api"
 import styles from "./ReferencesPage.module.css"
 import {
     TagOutlined,
@@ -13,8 +14,6 @@ import {
     CheckOutlined,
     CloseOutlined,
 } from "@ant-design/icons"
-
-const API_URL = "http://localhost:5000/api"
 
 export default function ReferencesPage() {
     const { token } = useAuth()

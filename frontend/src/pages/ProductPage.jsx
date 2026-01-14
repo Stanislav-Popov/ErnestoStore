@@ -3,6 +3,7 @@
 import styles from "./../styles/productPage.module.css"
 import { useEffect, useState, useContext, useRef } from "react"
 import { useParams } from "react-router-dom"
+import { API_URL, getImageUrl } from "../config/api"
 import CatalogProductCard from "./../components/ProductCard/CatalogProductCard"
 import Breadcrumbs from "./../components/Breadcrumbs/Breadcrumbs"
 import { HeartOutlined, HeartFilled } from "@ant-design/icons"
@@ -10,16 +11,6 @@ import { FavoritesContext } from "../context/FavoritesContext"
 import { ProductPageSkeleton } from "../components/Skeleton/Skeleton"
 import { useSEO } from "../hooks/useSEO"
 import { ProductMainImage, ThumbnailImage } from "../components/OptimizedImage/OptimizedImage"
-
-const API_URL = "http://localhost:5000/api"
-
-// Хелпер для формирования полного URL изображения
-const getImageUrl = (path) => {
-    if (!path) return "/images/placeholder.jpg"
-    if (path.startsWith("http")) return path
-    if (path.startsWith("/uploads")) return `http://localhost:5000${path}`
-    return path
-}
 
 export default function ProductPage() {
     const { id } = useParams()
