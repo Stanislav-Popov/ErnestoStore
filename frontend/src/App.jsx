@@ -10,7 +10,7 @@ import AppHeader from "./components/AppHeader"
 import Footer from "./components/Footer/Footer"
 import CookieConsent from "./components/CookieConsent/CookieConsent"
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
-import { FavoritesProvider } from "./context/FavoritesContext"
+import { FavoritesProvider } from "./context/Favoritescontext"
 
 // Admin imports
 import { AuthProvider } from "./admin/context/AuthContext"
