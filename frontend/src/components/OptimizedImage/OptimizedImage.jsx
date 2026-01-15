@@ -77,6 +77,7 @@ function OptimizedImage({
     const [hasError, setHasError] = useState(false)
     const [isInView, setIsInView] = useState(priority)
     const containerRef = useRef(null)
+    const imgRef = useRef(null)
 
     const fullSrc = getFullUrl(src)
     const optimizedSrc = getOptimizedUrl(src, { width, quality })
@@ -84,6 +85,13 @@ function OptimizedImage({
 
     // URL для WebP версии
     const webpSrcSet = srcSet ? srcSet.replace(/(\?w=\d+)/g, "$1&format=webp") : ""
+
+    // useEffect для проверки complete (после того, как изображение отрендерилось и isInView true):
+    useEffect(() => {
+        if (isInView && imgRef.current && imgRef.current.complete && !hasError) {
+            setIsLoaded(true)
+        }
+    }, [isInView, hasError]) // Зависимости: проверяем при смене видимости или ошибки
 
     // Intersection Observer для lazy loading
     useEffect(() => {
@@ -144,6 +152,7 @@ function OptimizedImage({
                     {srcSet && <source srcSet={srcSet} sizes={sizes} />}
 
                     <img
+                        ref={imgRef}
                         src={optimizedSrc || "/images/placeholder.jpg"}
                         alt={alt}
                         className={`${styles.image} ${isLoaded ? styles.loaded : ""}`}
