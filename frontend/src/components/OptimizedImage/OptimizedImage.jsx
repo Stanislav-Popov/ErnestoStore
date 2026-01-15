@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, memo } from "react"
 import styles from "./optimizedImage.module.css"
 
-const SERVER_URL = "http://localhost:5000"
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
 
 /**
  * Формирует полный URL изображения

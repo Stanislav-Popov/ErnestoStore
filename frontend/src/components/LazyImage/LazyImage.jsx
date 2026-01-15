@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from "react"
 import styles from "./lazyImage.module.css"
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
+
 /**
  * Компонент для ленивой загрузки изображений с плейсхолдером
  * @param {string} src - URL изображения
@@ -68,12 +70,9 @@ export default function LazyImage({
             style={{
                 backgroundColor: placeholderColor,
                 ...style,
-            }}
-        >
+            }}>
             {/* Скелетон-анимация пока изображение загружается */}
-            {!isLoaded && (
-                <div className={styles.skeleton} />
-            )}
+            {!isLoaded && <div className={styles.skeleton} />}
 
             {/* Само изображение */}
             {isInView && !hasError && (
@@ -97,8 +96,7 @@ export default function LazyImage({
                         height="48"
                         fill="none"
                         stroke="#ccc"
-                        strokeWidth="1.5"
-                    >
+                        strokeWidth="1.5">
                         <rect x="3" y="3" width="18" height="18" rx="2" />
                         <circle cx="8.5" cy="8.5" r="1.5" fill="#ccc" />
                         <path d="M21 15l-5-5L5 21" />
@@ -114,9 +112,7 @@ export default function LazyImage({
  */
 export function ProductImage({ src, alt, className = "", aspectRatio = "1/1" }) {
     // Формируем полный URL если это относительный путь к uploads
-    const fullSrc = src?.startsWith("/uploads") 
-        ? `http://localhost:5000${src}` 
-        : src
+    const fullSrc = src?.startsWith("/uploads") ? `${SERVER_URL}${src}` : src
 
     return (
         <LazyImage

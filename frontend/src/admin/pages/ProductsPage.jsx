@@ -13,7 +13,8 @@ import {
 } from "@ant-design/icons"
 import ProductModal from "../components/ProductModal"
 
-const API_URL = "http://localhost:5000/api"
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
 
 export default function ProductsPage() {
     const { token } = useAuth()
@@ -167,7 +168,7 @@ export default function ProductsPage() {
                                         <img
                                             src={
                                                 product.image?.startsWith("/uploads")
-                                                    ? `http://localhost:5000${product.image}`
+                                                    ? `${SERVER_URL}${product.image}`
                                                     : product.image || "/images/placeholder.jpg"
                                             }
                                             alt=""

@@ -6,11 +6,14 @@ import styles from "./searchInput.module.css"
 import { CloseOutlined, SearchOutlined, LoadingOutlined } from "@ant-design/icons"
 import { useDebounce } from "../../hooks/useDebounce"
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
+
+
 // Хелпер для формирования полного URL изображения
 const getImageUrl = (path) => {
     if (!path) return "/images/placeholder.jpg"
     if (path.startsWith("http")) return path
-    if (path.startsWith("/uploads")) return `http://localhost:5000${path}`
+    if (path.startsWith("/uploads")) return `${SERVER_URL}${path}`
     return path
 }
 

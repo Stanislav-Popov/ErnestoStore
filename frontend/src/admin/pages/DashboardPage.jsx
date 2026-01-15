@@ -12,8 +12,8 @@ import {
     PercentageOutlined,
 } from "@ant-design/icons"
 
-const API_URL = "http://localhost:5000/api"
-const SERVER_URL = "http://localhost:5000"
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
 
 // Хелпер для формирования полного URL изображения
 const getImageUrl = (path) => {

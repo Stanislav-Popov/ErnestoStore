@@ -11,13 +11,14 @@ import { ProductPageSkeleton } from "../components/Skeleton/Skeleton"
 import { useSEO } from "../hooks/useSEO"
 import { ProductMainImage, ThumbnailImage } from "../components/OptimizedImage/OptimizedImage"
 
-const API_URL = "http://localhost:5000/api"
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5000"
 
 // Хелпер для формирования полного URL изображения
 const getImageUrl = (path) => {
     if (!path) return "/images/placeholder.jpg"
     if (path.startsWith("http")) return path
-    if (path.startsWith("/uploads")) return `http://localhost:5000${path}`
+    if (path.startsWith("/uploads")) return `${SERVER_URL}${path}`
     return path
 }
 
