@@ -2,10 +2,17 @@
 
 import { useState, useRef, useEffect, useMemo, useCallback } from "react"
 import { useNavigate } from "react-router-dom"
-import { getImageUrl } from "../../config/api"
 import styles from "./searchInput.module.css"
 import { CloseOutlined, SearchOutlined, LoadingOutlined } from "@ant-design/icons"
 import { useDebounce } from "../../hooks/useDebounce"
+
+// Хелпер для формирования полного URL изображения
+const getImageUrl = (path) => {
+    if (!path) return "/images/placeholder.jpg"
+    if (path.startsWith("http")) return path
+    if (path.startsWith("/uploads")) return `http://localhost:5000${path}`
+    return path
+}
 
 export default function SearchInput({
     placeholder = "Поиск...",

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useAuth } from "../context/AuthContext"
-import { API_URL, getImageUrl } from "../../config/api"
 import styles from "./ProductsPage.module.css"
 import {
     PlusOutlined,
@@ -13,6 +12,8 @@ import {
     HeartOutlined,
 } from "@ant-design/icons"
 import ProductModal from "../components/ProductModal"
+
+const API_URL = "http://localhost:5000/api"
 
 export default function ProductsPage() {
     const { token } = useAuth()
@@ -164,7 +165,11 @@ export default function ProductsPage() {
                                 <tr key={product.id}>
                                     <td>
                                         <img
-                                            src={getImageUrl(product.image)}
+                                            src={
+                                                product.image?.startsWith("/uploads")
+                                                    ? `http://localhost:5000${product.image}`
+                                                    : product.image || "/images/placeholder.jpg"
+                                            }
                                             alt=""
                                             className={styles.productImage}
                                         />
