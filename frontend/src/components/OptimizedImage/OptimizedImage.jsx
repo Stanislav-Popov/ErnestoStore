@@ -88,10 +88,15 @@ function OptimizedImage({
 
     // useEffect для проверки complete (после того, как изображение отрендерилось и isInView true):
     useEffect(() => {
-        if (isInView && imgRef.current && imgRef.current.complete && !hasError) {
-            setIsLoaded(true)
+        if (isInView && !hasError && imgRef.current && !isLoaded) {
+            // Добавил !isLoaded, чтобы избежать лишних проверок
+            setTimeout(() => {
+                if (imgRef.current && imgRef.current.complete) {
+                    setIsLoaded(true)
+                }
+            }, 0)
         }
-    }, [isInView, hasError]) // Зависимости: проверяем при смене видимости или ошибки
+    }, [isInView, hasError, isLoaded]) // Добавил isLoaded в зависимости, если нужно отслеживать изменения
 
     // Intersection Observer для lazy loading
     useEffect(() => {
