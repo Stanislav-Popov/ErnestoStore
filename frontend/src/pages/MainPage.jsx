@@ -18,7 +18,7 @@ export default function MainPage() {
     return (
         <CatalogProvider>
             <HeroBlock />
-            <CategoriesBlock />
+            {/* <CategoriesBlock /> */}
             <NewArrivalsBlock />
             <BestSellersBlock />
             <StoresMap />
