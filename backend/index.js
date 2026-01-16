@@ -46,7 +46,7 @@ if (!fs.existsSync(cacheDir)) {
  * - format: webp, jpeg, png (автоопределение по Accept header)
  */
 async function imageProcessingMiddleware(req, res, next) {
-    const requestedPath = req.path
+    const requestedPath = req.path.replace(/^\/uploads/, "")
     const { w, q, format } = req.query
 
     // Если нет параметров оптимизации, передаём статике
@@ -56,6 +56,9 @@ async function imageProcessingMiddleware(req, res, next) {
 
     // Путь к оригинальному файлу
     const originalPath = path.join(uploadsDir, requestedPath)
+
+    console.log("requestedPath:", requestedPath)
+    console.log("originalPath:", originalPath)
 
     // Проверяем существование файла
     if (!fs.existsSync(originalPath)) {
