@@ -75,7 +75,8 @@ function OptimizedImage({
 }) {
     const [isLoaded, setIsLoaded] = useState(false)
     const [hasError, setHasError] = useState(false)
-    const [isInView, setIsInView] = useState(priority)
+    // const [isInView, setIsInView] = useState(priority)
+    const isInView = true;
     const containerRef = useRef(null)
     const imgRef = useRef(null)
 
@@ -113,7 +114,7 @@ function OptimizedImage({
                 }
             },
             {
-                rootMargin: "400px",
+                rootMargin: "200px",
                 threshold: 0.01,
             }
         )
@@ -143,33 +144,33 @@ function OptimizedImage({
     }
 
     return (
-        <div ref={containerRef} className={`${styles.container} ${className}`} style={{ aspectRatio }}>
-            {/* Skeleton placeholder */}
-            {!isLoaded && !hasError && <div className={styles.skeleton} />}
+            <div ref={containerRef} className={`${styles.container} ${className}`} style={{ aspectRatio }}>
+                {/* Skeleton placeholder */}
+                {!isLoaded && !hasError && <div className={styles.skeleton} />}
 
-            {/* Основное изображение */}
-            {isInView && !hasError && (
-                <picture>
-                    {/* WebP версия */}
-                    {webpSrcSet && <source type="image/webp" srcSet={webpSrcSet} sizes={sizes} />}
+                {/* Основное изображение */}
+                {!hasError && (
+                    <picture>
+                        {/* WebP версия */}
+                        {webpSrcSet && <source type="image/webp" srcSet={webpSrcSet} sizes={sizes} />}
 
-                    {/* Fallback на оригинальный формат */}
-                    {srcSet && <source srcSet={srcSet} sizes={sizes} />}
+                        {/* Fallback на оригинальный формат */}
+                        {srcSet && <source srcSet={srcSet} sizes={sizes} />}
 
-                    <img
-                        ref={imgRef}
-                        src={optimizedSrc || "/images/placeholder.jpg"}
-                        alt={alt}
-                        className={`${styles.image} ${isLoaded ? styles.loaded : ""}`}
-                        style={{ objectFit }}
-                        onLoad={handleLoad}
-                        onError={handleError}
-                        loading={priority ? "eager" : "lazy"}
-                        decoding="async"
-                        {...props}
-                    />
-                </picture>
-            )}
+                        <img
+                            ref={imgRef}
+                            src={optimizedSrc || "/images/placeholder.jpg"}
+                            alt={alt}
+                            className={`${styles.image} ${isLoaded ? styles.loaded : ""}`}
+                            style={{ objectFit }}
+                            onLoad={handleLoad}
+                            onError={handleError}
+                            loading={priority ? "eager" : "lazy"}
+                            decoding="async"
+                            {...props}
+                        />
+                    </picture>
+                )}
 
             {/* Placeholder при ошибке */}
             {hasError && (
