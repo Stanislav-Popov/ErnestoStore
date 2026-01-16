@@ -139,6 +139,8 @@ async function imageProcessingMiddleware(req, res, next) {
     } catch (error) {
         console.error("Ошибка обработки изображения:", error)
         // Fallback на оригинал
+        req.url = req.path // ❗ УБИРАЕМ ?w=&format=
+        req.query = {}
         next()
     }
 }
