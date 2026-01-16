@@ -62,6 +62,9 @@ async function imageProcessingMiddleware(req, res, next) {
 
     // Проверяем существование файла
     if (!fs.existsSync(originalPath)) {
+        req.url = req.path
+        req.query = {}
+        return next()
         return res.status(404).json({ error: "Изображение не найдено" })
     }
 
